@@ -25,8 +25,23 @@ addTaskOnScreen()
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+function goBack()  {
+  const h1 = document.getElementById("Heading").style.visibility = "visible";
+
+  const h2 = document.getElementById("Heading2").style.visibility = "visible"
+
+  const h6 = document.getElementById("parent").style.display = "block"
+
+  const h3 = document.getElementById("sub").style.visibility = "hidden"
+
+  const h4 =  document.getElementById("left").style.visibility = "hidden"
+
+  const h5 =  document.getElementById("back").style.visibility = "hidden"
 
 
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function addTaskOnScreen() {
     
@@ -46,7 +61,7 @@ function addTaskOnScreen() {
 
     function enter() {
 
-        const h1 = document.getElementById("Heading").style.display = "none"
+        const h1 = document.getElementById("Heading").style.visibility = "hidden"
         
         const h2 = document.getElementById("Heading2").style.visibility = "hidden"
 
@@ -55,7 +70,7 @@ function addTaskOnScreen() {
      
 
         const h7 = document.getElementById("body").style.overflowY = "hidden"
-        //    h7.appendChild(element)
+        // element.style.margin = "96px 609px"
 
         const h3 = document.getElementById("sub")
         h3.innerText = task[task.length-1].taskName;
@@ -64,13 +79,9 @@ function addTaskOnScreen() {
         const h4 =  document.getElementById("left").style.visibility = "visible"
         const h5 =  document.getElementById("back").style.visibility = "visible"
 
+       
 
      }
-
-   
-
-    //  const parent11 = document.getElementById("parent1")
-    //  element.appendChild(parent11)
  
 
     const parent = document.getElementById("parent")
@@ -120,12 +131,10 @@ function addTaskOnScreen() {
 }
 
 
+
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
-
-// 
 
 const task1=[];
 
@@ -147,9 +156,15 @@ function  addItemsOnScreen() {
 
     get.innerText = task1[task1.length-1].itemName;
     
-    const parent11 = document.getElementById("parent1")
-    parent11.appendChild(get)
+
+
+    const element = document.getElementById("child")
+    element.appendChild(get)  
+    const parent = document.getElementById("parent")
+    parent.appendChild(element);
    
+   
+
    
 
 }
@@ -185,16 +200,3 @@ function closer2() {
 }
 //==============================================================================================
 
-const addButton = document.querySelector("#add");
-
-const updateLSData = () => {
-  const textAreaData = document.querySelectorAll("textarea");
-  const notes = [];
-  console.log(textAreaData);
-  textAreaData.forEach((note) => {
-    return notes.push(note.value);
-  });
-  console.log(notes);
-
-  localStorage.setItem("notes", JSON.stringify(notes));
-};
