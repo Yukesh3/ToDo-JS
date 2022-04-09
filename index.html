@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo JS</title>
+    <link rel="shortcut icon" href="./Images/todo.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body id="body">
+
+
+<div id="bG">
+
+    <h1 id="Heading"> <b>Tasks</b> <span style="font-weight: lighter;">Lists</span> </h1>
+
+    <div id="Heading2">Add Item</div>
+
+    <img id="addIcon" onclick="clickToAdd()" src="./Images/add-circle.png">
+
+    <p id="noItem">No Items In The ToDo List</p>
+    
+    <div id="parent"></div>
+
+</div>
+
+<div id="parent1"></div>
+
+
+
+<div id="back"><h1>Back</h1></div>
+
+<img id="left" src="./Images/left.png" alt="">
+
+<div id="sub"></div>
+
+
+<div id="newList">
+
+    <br><label class="list" for="name">Add New List</label><br><br><br>
+
+    <input onclick="touchToOpen()" class="box" type="text" id="name" value="" placeholder="Enter Country Name"  required > <br><br><br>
+
+    <button class="button" onclick="addTask()">Add</button>
+
+    <button id="close" onclick="closer1()">Close</button>
+
+</div>
+
+
+<div id="newItem">
+
+    <br><label class="item" for="item1">Add New Item</label><br><br><br>
+
+    <input class="box1" type="text" id="item1" value="" placeholder="Add New Item" required><br><br><br>
+
+    <button class="button1" onclick="addItem()">Add</button>
+
+    <button id="close1" onclick="closer2()">Close</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
